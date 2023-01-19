@@ -1,0 +1,107 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #2E0249;
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 2em;
+    animation: header 1s step-end;
+}
+@keyframes header{
+    0%{
+        transform:translateY(-100%);
+    }
+}
+nav li{
+    display: inline-block;
+    margin: 10px 20px;
+    float: right;
+}
+.main{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+.content{
+    width:50%;
+    margin-top: 10pt;
+    margin-left: 10pt;
+    animation: content 1s ease-in;
+}
+@keyframes content{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+}
+.content h1{
+    font-size: 5em;
+    margin-bottom: 2%;
+    letter-spacing: 10px;
+    color: aqua;
+}
+.content h3{
+    font-size: 2em;
+    margin-bottom: 3%;
+    color: #FF0032;
+}
+p{
+    color: #FFEA20;
+}
+button{
+    padding: 20px;
+    color: brown;
+    font-size: 1.5em;
+    border-radius: 10px;
+    background-color: #FFD4D4;
+}
+button:hover{
+    background-color: beige;
+}
+.image{
+    z-index: -1;
+}
+img{
+    width:40rem;
+    animation: car 5s ease-in-out;
+
+}
+@keyframes car{
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@media screen and (max-width:1200px){
+    .content{
+        width:100%;
+        text-align: center;
+    }
+.image{
+    width:100%;
+    position: absolute;
+    bottom:-5%;
+    display: flex;
+    justify-content: center;
+}
+img{
+    width:20rem;
+}
+    
+}
